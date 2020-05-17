@@ -1,0 +1,39 @@
+.chat-main
+  .chat-main__header
+    .chat-main__header-info
+      .chat-main__header-info--title
+        title
+      .chat-main__header-info--menber
+        oma
+    = link_to "#", class: "chat-main__header-edit-btn" do
+      Edit
+  .chat-main__chat
+    .chat-main__chat--info
+      .chat-main__chat--info-user
+        oma
+      .chat-main__chat--info-ts
+        020/05/15(Fri) 11:41:28
+    .chat-main__chat--mess
+      test1
+    .chat-main__chat--info
+      .chat-main__chat--info-user
+        oma
+      .chat-main__chat--info-ts
+        020/05/15(Fri) 11:41:28
+    .chat-main__chat--mess
+      test2
+    .chat-main__chat--info
+      .chat-main__chat--info-user
+        oma
+      .chat-main__chat--info-ts
+        020/05/15(Fri) 11:41:28
+    .chat-main__chat--mess
+      test3
+  .chat-main__form
+    %form.new_message
+      .input-box
+        %input{placeholder: "type a message",class: "input-box__text", type: "text"}
+        %label{class:"input-box__messbox"}
+          = icon('far', 'image')
+          %input{type: "file", class: "input-box__file"}
+      %input{class: "input-box__submit-btn",type: "submit",value: "send"}
