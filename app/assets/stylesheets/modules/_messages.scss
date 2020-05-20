@@ -37,6 +37,11 @@
     &-dsp {
       height: 95px;
       margin: 0px 20px;
+      text-decoration: none;
+      a {
+        text-decoration: none;
+        color: white;
+      }
       &--name {
         font-size: 15px;
         height: 37px;
