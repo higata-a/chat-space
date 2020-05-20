@@ -37,15 +37,20 @@
     &-dsp {
       height: 95px;
       margin: 0px 20px;
+      display: flex;
       &--name {
+        float: left;
         font-size: 15px;
         height: 37px;
         padding-top: 21px;
+        color: white;
       }
       &--mess {
+        float: left;
         font-size: 11px;
         height: 13px;
         padding-top: 5px;
+        color: white;
       }
     }
   }
