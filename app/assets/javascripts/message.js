@@ -46,6 +46,7 @@ $('#new_message').on('submit', function(e){
  e.preventDefault();
  var formData = new FormData(this);
  var url = $(this).attr('action');
+ $('.input-box__submit-btn').removeAttr('data-disable-with');
  $.ajax({
    url: url,
    type: "POST",
@@ -60,15 +61,11 @@ $('#new_message').on('submit', function(e){
     $('form')[0].reset();
     $('.chat-main__chat').animate({ scrollTop: $('.chat-main__chat')[0].scrollHeight});
 
-
-    $(function() {
-      var b = $('.chat-main__chat');
-      console.log('コンテンツ本体：' + b.height() + '×' + b.width());
-      console.log('内部余白込み：' + b.innerHeight() + '×' + b.innerWidth());
-      console.log('枠線込み：' + b.outerHeight() + '×' + b.outerWidth());
-      console.log('外部余白込み：' + b.outerHeight(true) + '×' + b.outerWidth(true));
-    });
-
   })
+
+  .fail(function() {
+    alert("メッセージ送信に失敗しました");
+  });
+
 })
 });

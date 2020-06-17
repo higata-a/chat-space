@@ -8,6 +8,7 @@
   color: #ffffff;
   background-color: #2f3e51;
   height: 100vh;
+  overflow: auto;
   &__user-name {
     height: 100px;
     background-color: #253141;
@@ -105,6 +106,8 @@
     background-color: #fafafa;
     padding-top: 35px;
     padding-bottom: 44px;
+    overflow: auto;
+    height: calc(100vh - 90px);
   }
 
   &__form {
