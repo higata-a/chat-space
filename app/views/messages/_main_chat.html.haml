@@ -7,7 +7,7 @@
         Menber:
         - @group.users.each do |user|
           = user.name
-    = link_to edit_groupgroup_path(current_user), class: "chat-main__header-edit-btn" do
+    = link_to edit_group_path(current_user), class: "chat-main__header-edit-btn" do
       Edit
   .chat-main__chat
     = render @messages
