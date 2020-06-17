@@ -6,6 +6,8 @@
   width: 300px;
   float: left;
   color: #ffffff;
+  background-color: #2f3e51;
+  height: 100vh;
   &__user-name {
     height: 100px;
     background-color: #253141;
@@ -32,7 +34,7 @@
     }
   }
   &__group-list {
-    height: calc(100vh - 100px);
+    // height: calc(100vh - 100px);
     background-color: #2f3e51;
     &-dsp {
       height: 95px;
@@ -98,11 +100,31 @@
       text-decoration: none;
     }
   }
+
+  &__chat {
+    background-color: #fafafa;
+    padding-top: 35px;
+    padding-bottom: 44px;
+  }
+
+  &__form {
+    height: 90px;
+    width: calc(100% - 300px);
+    background-color: #d2d2d2;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.message {
+  margin-top: 35px;
   &__chat {
     // height: calc(100vh - 100px - 90px);
-    padding: 35px 40px;
-    margin-bottom: 90px;
-    background-color: #fafafa;
+    margin: 0 0 46px 40px;
     &--info {
       display: flex;
       align-items: normal;
@@ -123,17 +145,6 @@
       color: #434A54;
       padding-bottom: 46px;
     }
-  }
-  &__form {
-    height: 90px;
-    width: calc(100% - 300px);
-    background-color: #d2d2d2;
-    display: flex;
-    align-items: center;
-    padding: 20px 40px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
   }
 }
 
