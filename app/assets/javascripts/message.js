@@ -6,7 +6,7 @@ $(function(){
     var last_message_id = $('.message:last').data("message-id");
     $.ajax({
       //ルーティングで設定した通りのURLを指定
-      url: "/api/messages",
+      url: "api/messages",
       //ルーティングで設定した通りhttpメソッドをgetに指定
       type: 'get',
       dataType: 'json',
@@ -14,6 +14,7 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
+      console.log(messages);
       if (messages.length !== 0) {
         //追加するHTMLの入れ物を作る
         var insertHTML = '';
@@ -22,8 +23,8 @@ $(function(){
           insertHTML += buildHTML(message)
         });
         //メッセージが入ったHTMLに、入れ物ごと追加
-        $('.messages').append(insertHTML);
-        $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+        $('.chat-main__chat').append(insertHTML);
+        $('.chat-main__chat').animate({ scrollTop: $('.chat-main__chat')[0].scrollHeight});
       }
     })
     .fail(function() {
@@ -104,3 +105,4 @@ $('#new_message').on('submit', function(e){
 if (document.location.href.match(/\/groups\/\d+\/messages/)) {
   setInterval(reloadMessages, 7000);
 }
+})
