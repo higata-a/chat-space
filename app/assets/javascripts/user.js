@@ -51,13 +51,11 @@ $(function() {
         if (users.length !== 0) {
           users.forEach(function(user) {
             addUser(user);
-            console.log("O");
           });
         } else if (input.length == 0) {
           return false;
         } else {
           addNoUser();
-          console.log("X");
         }
       })
       .fail(function() {
@@ -66,7 +64,6 @@ $(function() {
   });
 
   $(document).on("click", ".chat-group-user__btn--add", function() {
-    console.log("山")
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
     $(this)
