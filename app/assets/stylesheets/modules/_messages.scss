@@ -124,10 +124,9 @@
 }
 
 .message {
-  margin-top: 35px;
+  margin-bottom: 46px;
   &__chat {
-    // height: calc(100vh - 100px - 90px);
-    margin: 0 0 46px 40px;
+    margin-left:40px;
     &--info {
       display: flex;
       align-items: normal;

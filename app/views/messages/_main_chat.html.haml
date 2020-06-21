@@ -7,7 +7,10 @@
         Menber:
         - @group.users.each do |user|
           = user.name
-    = link_to edit_group_path(current_user), class: "chat-main__header-edit-btn" do
+    -# = link_to edit_group_path(current_user), class: "chat-main__header-edit-btn" do
+      Edit
+    -# カレントユーザーのIDを参照していたので、表示中のグループのIDを参照するように変更
+    = link_to edit_group_path(@group), class: "chat-main__header-edit-btn" do
       Edit
   .chat-main__chat
     = render @messages
